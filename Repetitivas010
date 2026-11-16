@@ -1,0 +1,78 @@
+
+# EJERCICIO 10
+# Sistema de evaluacion de estudiantes
+
+n = int(input("Ingrese cantidad de estudiantes (5 a 20): "))
+
+while n < 5 or n > 20:
+    print("La cantidad debe estar entre 5 y 20.")
+    n = int(input("Ingrese nuevamente: "))
+
+notas = []
+
+for i in range(n):
+
+    nota = int(input(f"Ingrese nota del estudiante {i + 1}: "))
+
+    while nota < 0 or nota > 20:
+        print("La nota debe estar entre 0 y 20.")
+        nota = int(input("Ingrese nuevamente: "))
+
+    notas.append(nota)
+
+# Calculos generales
+
+mayor = max(notas)
+menor = min(notas)
+promedio = sum(notas) / n
+
+cantidad_mayor = notas.count(mayor)
+cantidad_menor = notas.count(menor)
+
+pares = 0
+impares = 0
+aprobados = 0
+desaprobados = 0
+
+for nota in notas:
+
+    if nota % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+
+    if nota >= 13:
+        aprobados += 1
+    else:
+        desaprobados += 1
+
+# Calculo de porcentajes
+
+porcentaje_aprobados = (aprobados / n) * 100
+porcentaje_desaprobados = (desaprobados / n) * 100
+
+# Presentacion de resultados
+
+print("\n===== RESULTADOS DEL SALON =====")
+
+print("Notas registradas:", notas)
+
+print("Mayor nota:", mayor)
+print("Menor nota:", menor)
+
+print("Cantidad con mayor nota:", cantidad_mayor)
+print("Cantidad con menor nota:", cantidad_menor)
+
+print("Promedio del salon:", round(promedio, 2))
+
+print("Cantidad de notas pares:", pares)
+print("Cantidad de notas impares:", impares)
+
+print("Alumnos aprobados:", aprobados)
+print("Alumnos desaprobados:", desaprobados)
+
+print("Porcentaje de aprobados:",
+      round(porcentaje_aprobados, 2), "%")
+
+print("Porcentaje de desaprobados:",
+      round(porcentaje_desaprobados, 2), "%")
