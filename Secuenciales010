@@ -1,0 +1,38 @@
+
+# EJERCICIO 10 - CAJERO AUTOMATICO
+
+monto = int(input("Ingrese monto a retirar: S/ "))
+
+resto = monto
+
+b200 = resto // 200
+resto = resto % 200
+
+b100 = resto // 100
+resto = resto % 100
+
+b50 = resto // 50
+resto = resto % 50
+
+b20 = resto // 20
+resto = resto % 20
+
+b10 = resto // 10
+resto = resto % 10
+
+b5 = resto // 5
+resto = resto % 5
+
+m1 = resto
+
+print("\nDISTRIBUCION DEL DINERO")
+print("Billetes de S/200:", b200)
+print("Billetes de S/100:", b100)
+print("Billetes de S/50:", b50)
+print("Billetes de S/20:", b20)
+print("Billetes de S/10:", b10)
+print("Billetes de S/5:", b5)
+print("Monedas de S/1:", m1)
+
+print("Total de unidades:", 
+      b200 + b100 + b50 + b20 + b10 + b5 + m1)
