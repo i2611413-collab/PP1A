@@ -1,0 +1,15 @@
+
+# EJERCICIO 07 - ESTACIONAMIENTO
+
+horas = int(input("Ingrese horas utilizadas: "))
+minutos = int(input("Ingrese minutos adicionales: "))
+
+pago_horas = horas * 5.00
+pago_minutos = minutos * 0.10
+
+total = pago_horas + pago_minutos
+
+print("\nDETALLE DE ESTACIONAMIENTO")
+print("Pago por horas: S/", pago_horas)
+print("Pago por minutos: S/", round(pago_minutos, 2))
+print("Total a pagar: S/", round(total, 2))
