@@ -1,0 +1,30 @@
+
+# EJERCICIO 04
+# Determinar maximo y minimo
+
+n = int(input("Cantidad de numeros: "))
+
+if n <= 0:
+    print("Debe ingresar al menos un numero.")
+else:
+    numeros = []
+
+    for i in range(n):
+        numero = float(input(f"Ingrese numero {i + 1}: "))
+        numeros.append(numero)
+
+    maximo = numeros[0]
+    minimo = numeros[0]
+
+    for numero in numeros:
+
+        if numero > maximo:
+            maximo = numero
+
+        if numero < minimo:
+            minimo = numero
+
+    print("\nRESULTADOS")
+    print("Lista:", numeros)
+    print("Numero maximo:", maximo)
+    print("Numero minimo:", minimo)
