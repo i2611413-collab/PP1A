@@ -1,0 +1,11 @@
+
+# EJERCICIO 02 - PROMEDIO DE EXAMENES
+
+n1 = float(input("Ingrese nota 1: "))
+n2 = float(input("Ingrese nota 2: "))
+n3 = float(input("Ingrese nota 3: "))
+n4 = float(input("Ingrese nota 4: "))
+
+promedio = (n1 + n2 + n3 + n4) / 4
+
+print("El promedio final es:", round(promedio, 2))
