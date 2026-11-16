@@ -1,0 +1,13 @@
+
+# EJERCICIO 01 - VELOCIDAD FINAL
+
+velocidad_inicial = 0
+aceleracion = 0.8
+tiempo = 30
+
+velocidad_final = velocidad_inicial + aceleracion * tiempo
+
+velocidad_kmh = velocidad_final * 3.6
+
+print("Velocidad final en m/s:", velocidad_final)
+print("Velocidad final en km/h:", velocidad_kmh)
