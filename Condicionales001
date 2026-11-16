@@ -1,21 +1,18 @@
-INICIO
-    DEFINIR cantidad COMO ENTERO
-    DEFINIR precio, total COMO REAL
 
-    LEER cantidad
+# EJERCICIO 01 - COMPRA DE LLANTAS
 
-    SI cantidad > 0 ENTONCES
-        SI cantidad < 5 ENTONCES
-            precio <- 150
-        SINO
-            precio <- 120
-        FIN SI
+cantidad = int(input("Ingrese cantidad de llantas: "))
 
-        total <- cantidad * precio
+if cantidad <= 0:
+    print("Cantidad no valida")
+else:
+    if cantidad < 5:
+        precio = 150
+    else:
+        precio = 120
 
-        ESCRIBIR precio
-        ESCRIBIR total
-    SINO
-        ESCRIBIR "Cantidad no valida"
-    FIN SI
-FIN
+    total = cantidad * precio
+
+    print("Precio por llanta: S/", precio)
+    print("Total a pagar: S/", total)
+
