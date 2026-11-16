@@ -1,0 +1,15 @@
+
+# EJERCICIO 06 - TIEMPO DE VIDA
+
+edad = int(input("Ingrese su edad en años: "))
+
+meses = edad * 12
+semanas = edad * 52
+dias = edad * 365
+horas = dias * 24
+
+print("\nTIEMPO DE VIDA APROXIMADO")
+print("Meses:", meses)
+print("Semanas:", semanas)
+print("Dias:", dias)
+print("Horas:", horas)
