@@ -1,0 +1,56 @@
+
+# EJERCICIO 08
+# Registro de asistentes a una fiesta
+
+edades = []
+hombres = 0
+mujeres = 0
+
+suma_hombres = 0
+suma_mujeres = 0
+
+continuar = "S"
+
+while continuar == "S":
+
+    edad = int(input("Ingrese la edad: "))
+
+    while edad < 0:
+        print("Edad no valida.")
+        edad = int(input("Ingrese nuevamente la edad: "))
+
+    sexo = input("Ingrese sexo (M/F): ").upper()
+
+    while sexo not in ["M", "F"]:
+        print("Ingrese M o F.")
+        sexo = input("Ingrese sexo (M/F): ").upper()
+
+    edades.append(edad)
+
+    if sexo == "M":
+        hombres += 1
+        suma_hombres += edad
+    else:
+        mujeres += 1
+        suma_mujeres += edad
+
+    continuar = input("Desea registrar otra persona? (S/N): ").upper()
+
+    while continuar not in ["S", "N"]:
+        continuar = input("Ingrese S o N: ").upper()
+
+total = len(edades)
+
+print("\nRESULTADOS DE LA FIESTA")
+print("Total de asistentes:", total)
+print("Cantidad de hombres:", hombres)
+print("Cantidad de mujeres:", mujeres)
+
+if hombres > 0:
+    print("Promedio de edad hombres:", suma_hombres / hombres)
+
+if mujeres > 0:
+    print("Promedio de edad mujeres:", suma_mujeres / mujeres)
+
+print("Edad minima:", min(edades))
+print("Edad maxima:", max(edades))
