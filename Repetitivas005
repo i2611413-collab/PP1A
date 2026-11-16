@@ -1,0 +1,20 @@
+
+# EJERCICIO 05
+# Ahorro anual durante 12 meses
+
+ahorro_total = 0
+
+for mes in range(1, 13):
+
+    deposito = float(input(f"Ingrese deposito del mes {mes}: S/ "))
+
+    while deposito < 0:
+        print("El deposito no puede ser negativo.")
+        deposito = float(input("Ingrese nuevamente: S/ "))
+
+    ahorro_total += deposito
+
+    print("Ahorro acumulado: S/", round(ahorro_total, 2))
+
+print("\nRESUMEN ANUAL")
+print("Ahorro total del año: S/", round(ahorro_total, 2))
