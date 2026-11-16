@@ -1,0 +1,19 @@
+
+# EJERCICIO 09 - COMPRA CON DESCUENTO
+
+monto = float(input("Ingrese monto de compra: S/ "))
+porcentaje = float(input("Ingrese porcentaje de descuento: "))
+pago = float(input("Ingrese dinero entregado: S/ "))
+
+descuento = monto * porcentaje / 100
+
+total = monto - descuento
+
+vuelto = pago - total
+
+print("\nDETALLE DE COMPRA")
+print("Monto original: S/", round(monto, 2))
+print("Descuento aplicado: S/", round(descuento, 2))
+print("Total a pagar: S/", round(total, 2))
+print("Dinero recibido: S/", round(pago, 2))
+print("Cambio: S/", round(vuelto, 2))
