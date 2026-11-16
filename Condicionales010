@@ -1,0 +1,49 @@
+
+# EJERCICIO 10 - LLAMADAS INTERNACIONALES
+
+codigo = int(input("Ingrese codigo de zona: "))
+minutos = float(input("Ingrese minutos hablados: "))
+
+if minutos <= 0:
+    print("Cantidad de minutos no valida.")
+
+else:
+    if codigo == 10:
+        zona = "America del Norte"
+        precio = 2.20
+
+    elif codigo == 12:
+        zona = "America del Centro"
+        precio = 2.50
+
+    elif codigo == 20:
+        zona = "America del Sur"
+        precio = 1.20
+
+    elif codigo == 22:
+        zona = "Asia"
+        precio = 3.50
+
+    elif codigo == 30:
+        zona = "Europa"
+        precio = 3.00
+
+    elif codigo == 32:
+        zona = "Africa"
+        precio = 3.20
+
+    else:
+        zona = ""
+        precio = 0
+
+    if zona == "":
+        print("Codigo de zona no valido.")
+
+    else:
+        total = minutos * precio
+
+        print("\nDETALLE DE LLAMADA")
+        print("Zona geografica:", zona)
+        print("Costo por minuto: S/", precio)
+        print("Minutos hablados:", minutos)
+        print("Costo total: S/", round(total, 2))
