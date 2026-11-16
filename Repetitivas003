@@ -1,0 +1,48 @@
+
+# EJERCICIO 03
+# Calculo de porcentajes
+
+n = int(input("Cantidad de numeros: "))
+x = float(input("Ingrese el valor de X: "))
+
+if n <= 0:
+    print("La cantidad debe ser mayor que cero.")
+else:
+    menores = 0
+    mayores = 0
+    iguales = 0
+    entre = 0
+    ninguno = 0
+
+    for i in range(1, n + 1):
+
+        numero = float(input(f"Ingrese numero {i}: "))
+
+        cumple = False
+
+        if numero < x:
+            menores += 1
+            cumple = True
+
+        if numero > x:
+            mayores += 1
+            cumple = True
+
+        if numero == x:
+            iguales += 1
+            cumple = True
+
+        if 1 <= numero <= x:
+            entre += 1
+            cumple = True
+
+        if not cumple:
+            ninguno += 1
+
+    print("\nPORCENTAJES")
+
+    print("Menores:", menores / n * 100, "%")
+    print("Mayores:", mayores / n * 100, "%")
+    print("Iguales:", iguales / n * 100, "%")
+    print("Entre 1 y X:", entre / n * 100, "%")
+    print("Ninguna condicion:", ninguno / n * 100, "%")
