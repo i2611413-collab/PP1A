@@ -1,0 +1,24 @@
+
+# EJERCICIO 02 - MAYOR Y MENOR
+
+a = float(input("Ingrese primer numero: "))
+b = float(input("Ingrese segundo numero: "))
+c = float(input("Ingrese tercer numero: "))
+
+mayor = a
+menor = a
+
+if b > mayor:
+    mayor = b
+
+if c > mayor:
+    mayor = c
+
+if b < menor:
+    menor = b
+
+if c < menor:
+    menor = c
+
+print("Numero mayor:", mayor)
+print("Numero menor:", menor)
