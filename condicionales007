@@ -1,0 +1,46 @@
+
+# EJERCICIO 07 - TARIFA TELEFONICA
+
+minutos = float(input("Duracion de la llamada: "))
+dia = input("Dia de llamada: ").upper()
+turno = input("Turno (DIURNO/NOCTURNO): ").upper()
+
+if minutos <= 0:
+    print("Tiempo no valido.")
+
+elif dia not in ["LUNES", "MARTES", "MIERCOLES",
+                 "JUEVES", "VIERNES", "SABADO", "DOMINGO"]:
+    print("Dia no valido.")
+
+elif dia == "DOMINGO" and turno not in ["DIURNO", "NOCTURNO"]:
+    print("Turno no valido.")
+
+else:
+    if minutos <= 5:
+        costo = minutos * 1.00
+
+    elif minutos <= 8:
+        costo = 5 * 1.00 + (minutos - 5) * 0.80
+
+    elif minutos <= 10:
+        costo = 5 * 1.00 + 3 * 0.80 + (minutos - 8) * 0.70
+
+    else:
+        costo = 5 * 1.00 + 3 * 0.80 + 2 * 0.70
+        costo += (minutos - 10) * 0.50
+
+    if dia == "DOMINGO":
+        if turno == "NOCTURNO":
+            porcentaje = 0.05
+        else:
+            porcentaje = 0.03
+    else:
+        porcentaje = 0
+
+    impuesto = costo * porcentaje
+    total = costo + impuesto
+
+    print("\nDETALLE DE LLAMADA")
+    print("Costo de llamada: S/", round(costo, 2))
+    print("Impuesto: S/", round(impuesto, 2))
+    print("Total a pagar: S/", round(total, 2))
