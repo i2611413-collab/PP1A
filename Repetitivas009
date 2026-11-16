@@ -1,0 +1,19 @@
+
+# EJERCICIO 09
+# Producto utilizando arrays
+
+numeros = list(range(100, 1, -2))
+numeros.append(1)
+
+producto = 1
+
+for numero in numeros:
+    producto *= numero
+
+print("SECUENCIA DE NUMEROS")
+print(numeros)
+
+print("\nCANTIDAD DE ELEMENTOS:", len(numeros))
+
+print("\nPRODUCTO TOTAL:")
+print(producto)
