@@ -1,0 +1,16 @@
+
+# EJERCICIO 03 - IMPUESTO
+
+edad = int(input("Ingrese su edad: "))
+ingreso = float(input("Ingrese ingreso mensual: S/ "))
+
+if edad < 0 or ingreso < 0:
+    print("Datos no validos")
+else:
+    if edad > 18 and ingreso >= 3000:
+        impuesto = ingreso * 0.05
+
+        print("Debe tributar.")
+        print("Impuesto a pagar: S/", round(impuesto, 2))
+    else:
+        print("No debe tributar.")
