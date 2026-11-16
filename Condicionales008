@@ -1,0 +1,41 @@
+
+# EJERCICIO 08 - ORDENAR TRES NUMEROS
+
+a = int(input("Ingrese primer numero: "))
+b = int(input("Ingrese segundo numero: "))
+c = int(input("Ingrese tercer numero: "))
+
+if a == b or a == c or b == c:
+    print("Los numeros deben ser diferentes.")
+
+else:
+    opcion = input(
+        "Orden ascendente (A) o descendente (D): "
+    ).upper()
+
+    if opcion == "A":
+        if a > b:
+            a, b = b, a
+
+        if a > c:
+            a, c = c, a
+
+        if b > c:
+            b, c = c, b
+
+        print("Orden ascendente:", a, b, c)
+
+    elif opcion == "D":
+        if a < b:
+            a, b = b, a
+
+        if a < c:
+            a, c = c, a
+
+        if b < c:
+            b, c = c, b
+
+        print("Orden descendente:", a, b, c)
+
+    else:
+        print("Opcion no valida.")
