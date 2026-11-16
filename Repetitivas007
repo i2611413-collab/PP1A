@@ -1,0 +1,42 @@
+
+# EJERCICIO 07
+# Calculo y comparacion de factoriales
+
+def calcular_factorial(numero):
+
+    resultado = 1
+
+    for i in range(1, numero + 1):
+        resultado *= i
+
+    return resultado
+
+
+n1 = int(input("Ingrese el primer numero: "))
+n2 = int(input("Ingrese el segundo numero: "))
+
+if n1 < 0 or n2 < 0:
+    print("El factorial no esta definido para negativos.")
+else:
+
+    factorial1 = calcular_factorial(n1)
+    factorial2 = calcular_factorial(n2)
+
+    desarrollo1 = " x ".join(
+        str(i) for i in range(1, n1 + 1)
+    ) or "1"
+
+    desarrollo2 = " x ".join(
+        str(i) for i in range(1, n2 + 1)
+    ) or "1"
+
+    print("\nPRIMER FACTORIAL")
+    print(f"{n1}! = {desarrollo1}")
+    print("Resultado:", factorial1)
+
+    print("\nSEGUNDO FACTORIAL")
+    print(f"{n2}! = {desarrollo2}")
+    print("Resultado:", factorial2)
+
+    print("\nCOMPARACION")
+    print("Son iguales hasta el factor:", min(n1, n2))
