@@ -1,0 +1,21 @@
+
+# EJERCICIO 04 - COLEGIATURA
+
+materias = int(input("Ingrese cantidad de materias: "))
+promedio = float(input("Ingrese promedio del alumno: "))
+
+if materias <= 0 or promedio < 0 or promedio > 20:
+    print("Datos no validos")
+else:
+    costo = materias * 100
+
+    if promedio >= 18:
+        descuento = costo * 0.25
+    else:
+        descuento = 0
+
+    total = costo - descuento
+
+    print("Costo total: S/", costo)
+    print("Descuento: S/", descuento)
+    print("Total a pagar: S/", total)
