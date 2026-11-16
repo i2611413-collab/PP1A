@@ -1,0 +1,16 @@
+
+# EJERCICIO 05 - INTERES BANCARIO
+
+capital = float(input("Ingrese capital a invertir: S/ "))
+
+tasa_mensual = 0.02
+meses = 12
+
+interes = capital * tasa_mensual * meses
+
+capital_final = capital + interes
+
+print("\nRESULTADO DE INVERSION")
+print("Capital inicial: S/", capital)
+print("Interes ganado: S/", round(interes, 2))
+print("Capital final: S/", round(capital_final, 2))
