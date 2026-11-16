@@ -1,0 +1,20 @@
+
+# EJERCICIO 04 - COMISION DE VENTAS
+
+sueldo_base = float(input("Ingrese sueldo base: S/ "))
+
+venta1 = float(input("Ingrese primera venta: S/ "))
+venta2 = float(input("Ingrese segunda venta: S/ "))
+venta3 = float(input("Ingrese tercera venta: S/ "))
+
+total_ventas = venta1 + venta2 + venta3
+
+comision = total_ventas * 0.25
+
+sueldo_final = sueldo_base + comision
+
+print("\nRESUMEN MENSUAL")
+print("Total de ventas: S/", total_ventas)
+print("Comision: S/", comision)
+print("Sueldo base: S/", sueldo_base)
+print("Total a recibir: S/", sueldo_final)
