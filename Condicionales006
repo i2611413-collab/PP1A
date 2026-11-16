@@ -1,0 +1,27 @@
+
+# EJERCICIO 06 - HORA DESPUES DE N SEGUNDOS
+
+hh = int(input("Ingrese horas: "))
+mm = int(input("Ingrese minutos: "))
+ss = int(input("Ingrese segundos: "))
+n = int(input("Ingrese segundos adicionales: "))
+
+if (0 <= hh < 24 and
+    0 <= mm < 60 and
+    0 <= ss < 60 and n >= 0):
+
+    total = hh * 3600 + mm * 60 + ss + n
+
+    total = total % 86400
+
+    nueva_hora = total // 3600
+    nuevos_minutos = (total % 3600) // 60
+    nuevos_segundos = total % 60
+
+    print("Nueva hora:")
+    print(f"{nueva_hora:02d}:"
+          f"{nuevos_minutos:02d}:"
+          f"{nuevos_segundos:02d}")
+
+else:
+    print("Hora o tiempo no valido.")
