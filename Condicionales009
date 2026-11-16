@@ -1,0 +1,30 @@
+
+# EJERCICIO 09 - COMPRA DE CAMISAS
+
+cantidad = int(input("Ingrese cantidad de camisas: "))
+precio = float(input("Ingrese precio por camisa: S/ "))
+
+if cantidad <= 0 or precio <= 0:
+    print("Datos no validos.")
+
+else:
+    subtotal = cantidad * precio
+
+    if cantidad <= 4:
+        porcentaje = 0.125
+
+    elif cantidad <= 8:
+        porcentaje = 0.20
+
+    else:
+        porcentaje = 0.315
+
+    descuento = subtotal * porcentaje
+    total = subtotal - descuento
+
+    print("\nDETALLE DE COMPRA")
+    print("Cantidad:", cantidad)
+    print("Subtotal: S/", round(subtotal, 2))
+    print("Descuento:", porcentaje * 100, "%")
+    print("Monto descontado: S/", round(descuento, 2))
+    print("Total a pagar: S/", round(total, 2))
