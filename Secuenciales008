@@ -1,19 +1,18 @@
 
-# EJERCICIO 09 - COMPRA CON DESCUENTO
+# EJERCICIO 08 - AREA DE UN TERRENO
 
-monto = float(input("Ingrese monto de compra: S/ "))
-porcentaje = float(input("Ingrese porcentaje de descuento: "))
-pago = float(input("Ingrese dinero entregado: S/ "))
+print("CALCULO DEL AREA DEL TERRENO")
 
-descuento = monto * porcentaje / 100
+A = float(input("Ingrese medida A: "))
+B = float(input("Ingrese medida B: "))
+C = float(input("Ingrese medida C: "))
 
-total = monto - descuento
+# Calculo del area del trapecio
 
-vuelto = pago - total
+area = (B * (A + C)) / 2
 
-print("\nDETALLE DE COMPRA")
-print("Monto original: S/", round(monto, 2))
-print("Descuento aplicado: S/", round(descuento, 2))
-print("Total a pagar: S/", round(total, 2))
-print("Dinero recibido: S/", round(pago, 2))
-print("Cambio: S/", round(vuelto, 2))
+print("\nRESULTADO")
+print("Medida A:", A)
+print("Medida B:", B)
+print("Medida C:", C)
+print("Area del terreno:", round(area, 2), "m2")
